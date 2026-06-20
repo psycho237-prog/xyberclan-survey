@@ -23,12 +23,16 @@
     </div>
 
     <header class="header">
-        <div class="container">
+        <div class="container" style="position: relative;">
+            <div class="lang-switcher" style="position: absolute; top: 0; right: 0; display: flex; gap: 0.5rem;">
+                <button id="btn-fr" class="btn btn-secondary btn-sm active" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">FR</button>
+                <button id="btn-en" class="btn btn-secondary btn-sm" style="padding: 0.2rem 0.5rem; font-size: 0.8rem;">EN</button>
+            </div>
             <a href="https://xyberclan.dev" target="_blank" rel="noopener noreferrer">
-                <img src="assets/logo.png" alt="XYBERCLAN Logo" style="max-height: 80px; margin-bottom: 1rem;">
+                <img src="assets/logo.png" alt="XYBERCLAN Logo" style="max-height: 120px; margin-bottom: 1rem;">
             </a>
             <h1 class="logo" style="display: none;">XYBERCLAN</h1>
-            <p class="subtitle">Votre partenaire en transformation numérique et cybersécurité</p>
+            <p class="subtitle" data-i18n="subtitle">Votre partenaire en transformation numérique et cybersécurité</p>
             <div class="contact-info" style="margin-top: 1rem; font-size: 0.9rem;">
                 <p><i class="fas fa-phone-alt"></i> +237 6 96 81 43 91 / +237 6 54 26 94 88</p>
                 <p><i class="fas fa-globe"></i> <a href="https://xyberclan.dev" target="_blank" style="text-decoration: none; font-weight: 700; font-size: 1.1rem;"><span style="color: #000000;">Xyber</span><span style="color: var(--primary-color);">clan</span></a></p>
@@ -290,6 +294,7 @@
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

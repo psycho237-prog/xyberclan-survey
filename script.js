@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Language Switcher ---
+    const btnFr = document.getElementById('btn-fr');
+    const btnEn = document.getElementById('btn-en');
+    
+    if (btnFr && btnEn) {
+        btnFr.addEventListener('click', () => {
+            btnFr.classList.add('active');
+            btnEn.classList.remove('active');
+            if (window.applyTranslations) window.applyTranslations('fr');
+        });
+        btnEn.addEventListener('click', () => {
+            btnEn.classList.add('active');
+            btnFr.classList.remove('active');
+            if (window.applyTranslations) window.applyTranslations('en');
+        });
+    }
+
     // --- Elements ---
     const startSurveyBtn = document.getElementById('startSurveyBtn');
     const presentationSection = document.querySelector('.presentation');
