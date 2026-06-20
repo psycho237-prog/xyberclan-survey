@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120" width="100%" height="100%">
+  <defs>
+    <!-- Background circle gradient -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DA9E8" />
+      <stop offset="100%" stop-color="#1C78B5" />
+    </linearGradient>
+    <!-- Cybernetic accents -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2C4" />
+      <stop offset="100%" stop-color="#3DA9E8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1C78B5" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Logo Group -->
+  <g transform="translate(10, 10)">
+    <!-- Circular Badge -->
+    <circle cx="50" cy="50" r="48" fill="url(#badgeGrad)" filter="url(#shadow)" />
+    <!-- Outer dashed circular track -->
+    <circle cx="50" cy="50" r="42" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" stroke-dasharray="6 4" />
+    
+    <!-- Stylized AI/Cyber Head with integrated 'X' -->
+    <g transform="translate(26, 26) scale(0.48)">
+      <!-- Head silhouette outline -->
+      <path d="M 20 20 
+               C 20 5, 45 -5, 75 0 
+               C 95 3, 105 15, 105 35 
+               C 105 45, 98 55, 101 65 
+               C 103 70, 108 72, 108 76 
+               C 108 82, 95 88, 88 88 
+               C 80 95, 73 110, 73 115 
+               L 42 115 
+               C 42 98, 32 85, 25 78 
+               C 18 70, 20 45, 20 20 Z" 
+            fill="none" 
+            stroke="#FFFFFF" 
+            stroke-width="5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" />
+            
+      <!-- The X-shape brain element -->
+      <!-- Slash 1 (Teal/Green) -->
+      <path d="M 35 25 L 85 80" fill="none" stroke="#00D2C4" stroke-width="8" stroke-linecap="round" />
+      <!-- Slash 2 (White/Light Blue) -->
+      <path d="M 80 25 L 35 85" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" />
+      
+      <!-- Digital nodes -->
+      <circle cx="35" cy="25" r="5" fill="#FFFFFF" />
+      <circle cx="85" cy="80" r="5" fill="#00D2C4" />
+      <circle cx="80" cy="25" r="5" fill="#00D2C4" />
+      <circle cx="35" cy="85" r="5" fill="#FFFFFF" />
+      <circle cx="60" cy="52" r="6" fill="#00D2C4" stroke="#FFFFFF" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Typography Group (XYBERCLAN) -->
+  <!-- "xyberclan.dev" small text -->
+  <text x="130" y="38" font-family="'Montserrat', sans-serif" font-weight="600" font-size="15" fill="#1C78B5" letter-spacing="0.5">xyberclan.dev</text>
+  
+  <!-- "XYBERCLAN" main title -->
+  <text x="130" y="72" font-family="'Montserrat', sans-serif" font-weight="800" font-size="34" fill="#000000" letter-spacing="0.5">XYBERCLAN</text>
+  
+  <!-- "Construire les rêves numériques" slogan -->
+  <text x="130" y="94" font-family="'Montserrat', sans-serif" font-weight="600" font-size="12.5" fill="#3DA9E8" letter-spacing="0.2">Construire les rêves numériques</text>
+</svg>

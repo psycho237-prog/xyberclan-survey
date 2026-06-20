@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquête Entreprises - XYBERCLAN</title>
+    <meta name="description" content="Participez à l'enquête XYBERCLAN sur la cybersécurité, l'IA et la transformation numérique en entreprise.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-decorations">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <a href="https://xyberclan.dev" target="_blank" rel="noopener noreferrer">
+                <img src="assets/logo.png" alt="XYBERCLAN Logo" style="max-height: 80px; margin-bottom: 1rem;">
+            </a>
+            <h1 class="logo" style="display: none;">XYBERCLAN</h1>
+            <p class="subtitle">Votre partenaire en transformation numérique et cybersécurité</p>
+            <div class="contact-info" style="margin-top: 1rem; font-size: 0.9rem;">
+                <p><i class="fas fa-phone-alt"></i> +237 6 96 81 43 91 / +237 6 54 26 94 88</p>
+                <p><i class="fas fa-globe"></i> <a href="https://xyberclan.dev" target="_blank" style="color: inherit; text-decoration: underline;">xyberclan.dev</a></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Présentation de XYBERCLAN -->
+        <section class="presentation fade-in">
+            <h2>Propulsez votre entreprise vers l'avenir</h2>
+            <p class="intro-text">XYBERCLAN accompagne les entreprises dans leurs défis technologiques. Découvrez nos domaines d'expertise :</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <i class="fas fa-shield-alt icon-blue"></i>
+                    <h3>Cybersécurité</h3>
+                    <ul>
+                        <li>Audit de sécurité</li>
+                        <li>Sensibilisation</li>
+                        <li>Gestion des risques</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-robot icon-blue"></i>
+                    <h3>Intelligence Artificielle</h3>
+                    <ul>
+                        <li>Intégration de solutions IA</li>
+                        <li>Optimisation des processus</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-cogs icon-blue"></i>
+                    <h3>Automatisation</h3>
+                    <ul>
+                        <li>Automatisation des tâches répétitives</li>
+                        <li>Gain de temps opérationnel</li>
+                    </ul>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-graduation-cap icon-blue"></i>
+                    <h3>Formation</h3>
+                    <ul>
+                        <li>Formations accélérées IA</li>
+                        <li>Sensibilisation à la cybersécurité</li>
+                        <li>Productivité numérique</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="start-survey-container">
+                <button id="startSurveyBtn" class="btn btn-primary">Commencer l'enquête <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Formulaire d'enquête -->
+        <section id="surveySection" class="survey-section hidden">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <form id="surveyForm" class="survey-form">
+                
+                <!-- Étape 1 : Informations générales -->
+                <div class="form-step active" data-step="1">
+                    <h3>1. Informations générales</h3>
+                    <div class="form-group">
+                        <label for="companyName">Nom de l'entreprise *</label>
+                        <input type="text" id="companyName" name="companyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Secteur d'activité *</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Sélectionnez un secteur</option>
+                            <option value="technologie">Technologie & Informatique</option>
+                            <option value="sante">Santé</option>
+                            <option value="finance">Finance & Assurance</option>
+                            <option value="commerce">Commerce & E-commerce</option>
+                            <option value="industrie">Industrie & Production</option>
+                            <option value="services">Services aux entreprises</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companySize">Taille de l'entreprise *</label>
+                        <select id="companySize" name="companySize" required>
+                            <option value="">Sélectionnez une taille</option>
+                            <option value="1-10">1 - 10 employés (TPE / Startup)</option>
+                            <option value="11-50">11 - 50 employés (Petite entreprise)</option>
+                            <option value="51-250">51 - 250 employés (PME)</option>
+                            <option value="251-1000">251 - 1000 employés (ETI)</option>
+                            <option value="1000+">Plus de 1000 employés (Grande entreprise)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Votre fonction *</label>
+                        <input type="text" id="role" name="role" required placeholder="Ex: Dirigeant, DSI, Responsable RH...">
+                    </div>
+                </div>
+
+                <!-- Étape 2 : Défis rencontrés -->
+                <div class="form-step" data-step="2">
+                    <h3>2. Défis rencontrés</h3>
+                    <div class="form-group">
+                        <label>Quels sont les principaux défis actuels de votre entreprise ? (Plusieurs choix possibles)</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="challenges" value="cybersecurite"> Cybersécurité et protection des données</label>
+                            <label><input type="checkbox" name="challenges" value="productivite"> Productivité et efficacité des équipes</label>
+                            <label><input type="checkbox" name="challenges" value="transformation_numerique"> Transformation numérique</label>
+                            <label><input type="checkbox" name="challenges" value="gestion_donnees"> Gestion et exploitation des données</label>
+                            <label><input type="checkbox" name="challenges" value="formation"> Formation et montée en compétences</label>
+                            <label><input type="checkbox" name="challenges" value="automatisation"> Automatisation des processus chronophages</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="priorities">Quelles sont vos priorités technologiques pour l'année à venir ?</label>
+                        <textarea id="priorities" name="priorities" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <!-- Étape 3 : Cybersécurité -->
+                <div class="form-step" data-step="3">
+                    <h3>3. Cybersécurité</h3>
+                    <div class="form-group">
+                        <label>Avez-vous déjà rencontré des incidents de cybersécurité ?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="cyberIncidents" value="phishing"> Tentatives de Phishing</label>
+                            <label><input type="checkbox" name="cyberIncidents" value="malware"> Infection par Malware / Ransomware</label>
+                            <label><input type="checkbox" name="cyberIncidents" value="fuite_donnees"> Fuite ou perte de données</label>
+                            <label><input type="checkbox" name="cyberIncidents" value="piratage_compte"> Piratage de comptes</label>
+                            <label><input type="checkbox" name="cyberIncidents" value="aucun"> Aucun incident majeur à ce jour</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="securityMaturity">Comment évaluez-vous votre niveau de maturité en cybersécurité ?</label>
+                        <select id="securityMaturity" name="securityMaturity">
+                            <option value="">Sélectionnez un niveau</option>
+                            <option value="faible">Faible (Peu de mesures en place)</option>
+                            <option value="moyen">Moyen (Antivirus et sauvegardes basiques)</option>
+                            <option value="avance">Avancé (Politique de sécurité, audits réguliers)</option>
+                            <option value="expert">Expert (Équipe dédiée, SOC, surveillance continue)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Étape 4 : Intelligence Artificielle -->
+                <div class="form-step" data-step="4">
+                    <h3>4. Intelligence Artificielle</h3>
+                    <div class="form-group">
+                        <label>Votre entreprise utilise-t-elle déjà des outils d'Intelligence Artificielle ?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="aiUsage" value="oui_beaucoup"> Oui, au quotidien</label>
+                            <label><input type="radio" name="aiUsage" value="oui_un_peu"> Oui, en phase de test / occasionnellement</label>
+                            <label><input type="radio" name="aiUsage" value="non_mais_prevu"> Non, mais c'est prévu</label>
+                            <label><input type="radio" name="aiUsage" value="non"> Non, pas du tout</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="aiTools">Si oui, quels outils ou cas d'usage ?</label>
+                        <textarea id="aiTools" name="aiTools" rows="2" placeholder="Ex: ChatGPT, Copilot, génération de contenu, analyse de données..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="processesToAutomate">Quels processus aimeriez-vous automatiser dans votre entreprise ?</label>
+                        <textarea id="processesToAutomate" name="processesToAutomate" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <!-- Étape 5 : Formation -->
+                <div class="form-step" data-step="5">
+                    <h3>5. Formation et Compétences</h3>
+                    <div class="form-group">
+                        <label>Quels thèmes de formation vous intéressent pour vos équipes ?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="trainingNeeds" value="ia_bases"> Utilisation de l'IA au quotidien (ChatGPT, etc.)</label>
+                            <label><input type="checkbox" name="trainingNeeds" value="cyber_sensibilisation"> Sensibilisation à la cybersécurité (phishing, mots de passe)</label>
+                            <label><input type="checkbox" name="trainingNeeds" value="automatisation"> Automatisation (Zapier, Make, etc.)</label>
+                            <label><input type="checkbox" name="trainingNeeds" value="outils_collaboratifs"> Maîtrise des outils collaboratifs avancés</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="skillGaps">Quelles lacunes de compétences identifiez-vous aujourd'hui ?</label>
+                        <textarea id="skillGaps" name="skillGaps" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <!-- Étape 6 : Suggestions -->
+                <div class="form-step" data-step="6">
+                    <h3>6. Suggestions et Besoins futurs</h3>
+                    <div class="form-group">
+                        <label for="suggestions">Avez-vous des attentes particulières ou des recommandations concernant les futures solutions numériques pour votre entreprise ?</label>
+                        <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Étape 7 : Intérêt Services XYBERCLAN -->
+                <div class="form-step" data-step="7">
+                    <h3>7. Intérêt pour les services XYBERCLAN</h3>
+                    <p class="section-desc">Pour vous accompagner, XYBERCLAN propose divers services. Lesquels pourraient vous intéresser ?</p>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="xyberclanServices" value="audit_cyber"> Audit de cybersécurité</label>
+                            <label><input type="checkbox" name="xyberclanServices" value="formation_ia"> Formation IA pour vos équipes</label>
+                            <label><input type="checkbox" name="xyberclanServices" value="automatisation"> Accompagnement en automatisation des processus</label>
+                            <label><input type="checkbox" name="xyberclanServices" value="conseil_numerique"> Conseil global en transformation numérique</label>
+                            <label><input type="checkbox" name="xyberclanServices" value="webinaires"> Participation à nos prochains webinaires experts</label>
+                            <label><input type="checkbox" name="xyberclanServices" value="ressources"> Réception de ressources gratuites (guides, livres blancs)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étape 8 : Contact -->
+                <div class="form-step" data-step="8">
+                    <h3>8. Contact (Optionnel)</h3>
+                    <p class="section-desc">Laissez vos coordonnées si vous souhaitez être recontacté par nos experts ou recevoir nos ressources.</p>
+                    <div class="form-group">
+                        <label for="contactName">Nom complet</label>
+                        <input type="text" id="contactName" name="contactName">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email professionnel</label>
+                        <input type="email" id="contactEmail" name="contactEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Téléphone</label>
+                        <input type="tel" id="contactPhone" name="contactPhone">
+                    </div>
+                    <div class="form-group consent-group">
+                        <label class="consent-label">
+                            <input type="checkbox" id="consent" name="consent">
+                            J'accepte d'être contacté(e) par XYBERCLAN concernant mes réponses et leurs services.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Navigation Formulaire -->
+                <div class="form-navigation">
+                    <button type="button" id="prevBtn" class="btn btn-secondary hidden">Précédent</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">Suivant</button>
+                    <button type="submit" id="submitBtn" class="btn btn-primary hidden">Envoyer mes réponses</button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="success-message hidden">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Merci pour votre participation !</h2>
+                <p>Vos réponses ont bien été enregistrées. Elles nous sont précieuses pour mieux comprendre les besoins des entreprises.</p>
+                <a href="https://xyberclan.dev" class="btn btn-primary">Découvrir XYBERCLAN</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 XYBERCLAN. Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem;">
+                <i class="fas fa-phone-alt"></i> +237 6 96 81 43 91 / +237 6 54 26 94 88 | 
+                <i class="fas fa-globe"></i> <a href="https://xyberclan.dev" target="_blank" style="color: white; text-decoration: underline;">xyberclan.dev</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
